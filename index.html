@@ -1,66 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Página web dedicada a subir mis proyectos">
     <meta name="author" content="Luis Eduardo Fagúndez">
-    <title>Luis Eduardo Fagúndez</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/business-frontpage.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <title>Profeluisfagundez.github.io</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="css/frontpage.css" rel="stylesheet">
     <style type="text/css">
         * {
             text-align: justify;
         }
     </style>
 </head>
-<!--Fin del head-->
-
-<body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Inicio</a>
-            </div>
-            <!--Fin del div class="navbar-header"-->
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="materiales.html">Materiales</a>
-                    </li>
-                    <li>
-                        <a href="contacto.html">Contacto</a>
-                    </li>
-                    <li>
-                        <a href="herramientas.html">Herramientas</a>
-                    </li>
-                    <li>
-                        <a href="sobremi.html">Sobre mi</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Fin del div class="collapse navbar-collapse" -->
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Inicio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Materiales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="herramientas.html">Herramientas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sobremi.html">Sobre mi</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <!-- fin del container -->
-    </nav>
-        <!-- Fin del nav class="navbar navbar-inverse navbar-fixed-top" -->
+      </nav>
 
-    <header class="business-header">
+      <header class="business-header">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -68,11 +51,10 @@
                 </div>
             </div>
         </div>
-    </header>
+      </header>
 
-    <div class="container">
+      <div class="container">
         <hr>
-
         <div class="row">
             <div class="col-sm-8" align="justify">
                 <h2>Una web libre, para un mundo libre</h2>
@@ -86,7 +68,7 @@
                     <li>Y muchisimo más.</li>
                 </ul>
                 <p>
-                    <a class="btn btn-default btn-lg" href="materiales.html">Materiales&raquo;</a>
+                    <a class="btn btn-outline-dark" href="materiales.html">Materiales&raquo;</a>
                 </p>
             </div>
             <div class="col-sm-4">
@@ -96,7 +78,7 @@
                     <p>En la sección de contacos podras encontrar los diferentes medios para charlar conmigo :)</p>
                     <p>Sus aportes siempre son bienvenidos.</p>
                     <p>
-                        <a class="btn btn-default btn-lg" href="contacto.html">Contacto&raquo;</a>
+                        <a class="btn btn-outline-dark" href="contacto.html">Contacto&raquo;</a>
                     </p>
                 </article>
             </div>
@@ -106,28 +88,24 @@
 
         <div class="row">
             <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="img/gitlab.jpg" alt="">
+                <img class="rounded-circle img-responsive img-center" src="img/gitlab.jpg" alt="">
                 <h2>Repositorio oficial</h2>
                 <p>En mi cuenta de Github podran encontrar todos los proyectos que vengo trabajando, al igual que el código de esta página web. También hay muchos repositorios educativos que uso para enseñar, los cuales están divididos por dificultad.</p>
                 <p>Materiales: <a href="https://github.com/profeluisfagundez">clic aquí</a></p>
             </div>
             <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="img/fedora.jpg" alt="">
+                <img class="rounded-circle img-responsive img-center" src="img/fedora.jpg" alt="">
                 <h2>Proyecto Fedora</h2>
                 <p>Esta web recomienda el uso del sistema operativo Fedora debido a la gran documentación que se encuentra en su página oficial <a href="https://start.fedoraproject.org/">Fedora Project</a> y la <a href="https://fedoraproject.org/wiki/Fedora_Project_Wiki">wiki oficial.</a></p>
                 <p>Descarga: <a href="https://getfedora.org/es/workstation/download/">clic aquí</a></p>
             </div>
             <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="img/freesoftware.svg" alt="">
+                <img class="rounded-circle img-responsive img-center" src="img/freesoftware.svg" alt="">
                 <h2>El conocimiento es poder</h2>
                 <p>Esta página web buscará crecer continuamente, ofreciendo materiales de calidad para mis alumnos y personas que quieran sumar algún nuevo concomiento, buscando siempre la filosofia de compartir. Te recomiendo pasar por la página del proyecto GNU y empezar a conocer los beneficios del software libre.</p>
                 <p>Enlace: <a href="http://www.gnu.org/home.es.html">clic aquí</a></p>
             </div>
-        </div>
-        <!-- fin del row de las tres secciones -->
-
-        <hr>
-
+        </div>  
         <footer>
             <div class="row">
                 <div class="col-lg-12">
@@ -136,16 +114,6 @@
             </div>
         </footer>
         <!-- Fin del Footer -->
-
-    </div>
-    <!-- fin del container  principal-->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
 </html>

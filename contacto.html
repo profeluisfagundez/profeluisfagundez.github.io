@@ -1,70 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Página web dedicada a subir mis proyectos y materiales para CETP">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Página web dedicada a subir mis proyectos">
     <meta name="author" content="Luis Eduardo Fagúndez">
-    <title>Prof. Luis Eduardo Fagúndez</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/business-frontpage.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <title>Profeluisfagundez.github.io</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/frontpage.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style type="text/css">
-        * {
-            text-align: justify;
-        }
-        table tr td {
-            padding: 5px;
-        }
-    </style>    
+      * {
+          text-align: justify;
+      }
+      table tr td {
+          padding: 5px;
+      }
+  </style>  
 </head>
-<!--Fin del head-->
-
-<body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Inicio</a>
-            </div>
-            <!--Fin del div class="navbar-header"-->
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="materiales.html">Materiales</a>
-                    </li>
-                    <li>
-                        <a href="contacto.html">Contacto</a>
-                    </li>
-                    <li>
-                        <a href="herramientas.html">Herramientas</a>
-                    </li>
-                    <li>
-                        <a href="sobremi.html">Sobre mi</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Fin del div class="collapse navbar-collapse" -->
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Inicio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Materiales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="herramientas.html">Herramientas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sobremi.html">Sobre mi</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <!-- fin del container -->
-    </nav>
-    <!-- Fin del nav class="navbar navbar-inverse navbar-fixed-top" -->
+      </nav>
 
-    <header class="business-header">
+      <header class="business-header">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -72,79 +54,58 @@
                 </div>
             </div>
         </div>
-    </header>
-    <!-- Fin del div class="business-header" -->
-    
-    <div class="container">
-        <hr>
+      </header>
 
-        <div class="row">
-            <div class="col-sm-9">
-                <h2>Contacto</h2>
-                <p>Complete el siguiente formulario para enviar sus dudas o sugerencias:</p>
-                <form class="form-group" action="#" method="post">
-                    <div class="form-group">
-                        <table>
-                            <tr>
-                                <td><label for='nombre'>Nombre: </label></td>
-                                <td> <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required/></td>
-                            </tr>
-                            <tr>
-                                <td><label for='apellido'>Apellido: </label></td>
-                                <td><input class="form-control" type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required/></td>
-                            </tr>
-                            <tr>
-                                <td><label for='u_email'>E-Mail: </label></td>
-                                <td><input class="form-control" type="email" id="u_email" name="u_email" placeholder="Ingrese su E-Mail" required/></td>
-                            </tr>
-                            <tr>
-                                <td><label for='celular'>Celular: </label></td>
-                                <td><input class="form-control" type="text" id="celular" name="celular" placeholder="Celular de contacto" minlength="9" maxlength="9" pattern="[0-9]+" required/></td>
-                            </tr>
-                            <tr>
-                                <td><label for='texto'>Dudas o sugerencias: </label></td>
-                                <td><textarea class="form-control" id="texto" rows="3"></textarea></td>
-                            </tr>    
-                            <tr>
-                                <td><input type="submit" value="enviar"></td>
-                            </tr>
-                        </table>
-                    </div>
-                </form>                
-            </div>
-            <div class="col-sm-3">
-                <h2>Publicidad</h2>
-                <article>
-                    <strong>Este espacio queda reservado para publicidad</strong>
-                    <br>texto publicitario
-                    <br>texto publicitario
-                    <br>texto publicitario
-                    <br>texto publicitario
-                    <br>texto publicitario
-                </article>
-            </div>
-        </div>
+      <!--Acá hacemos el formulario-->
+      <div class="container">
+        <h2>Formulario de contacto</h2>
+        <form>
+          <!-- Name input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="nombre">Nombre</label>
+            <input type="text" id="nombre" class="form-control" />
+          </div>
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="email">Dirección de Email</label>
+            <input type="email" id="email" class="form-control" />
+          </div>
+          <!-- Message input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="mensaje">Cuerpo del mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="4"></textarea>
+          </div>
+          <!-- Checkbox -->
+          <div class="form-check d-flex justify-content-center mb-4">
+            <input
+              class="form-check-input me-2"
+              type="checkbox"
+              value=""
+              id="checkboxid"
+              checked
+            />
+            <label class="form-check-label" for="copiaemail">
+              Enviarme una copia del email como respaldo
+            </label>
+          </div>
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary btn-block mb-4">Enviar</button>
+        </form>
+      </div>
+      <!--Fin del formulario-->
 
-        <hr>
-
+      <!-- Inicio del Footer -->
+      <div class="container">
         <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
-                </div>
-            </div>
-        </footer>
-        <!-- Fin del Footer -->
+          <div class="row">
+              <div class="col-lg-12">
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+              </div>
+          </div>
+      </footer>
+      </div>
 
-    </div>
-    <!-- fin del container  principal-->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
+    <!-- Fin del Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
-
 </html>
