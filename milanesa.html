@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cuenta regresiva 🍽️</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .time {
+      font-size: 1.8rem;
+      margin: 15px 0;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>⏳ Cuenta regresiva para comer milanesa con puré</h1>
+    <h2>Bubu me prometio unas milanesas ricas con pure :3</h2>
+    <div class="time" id="countdown"></div>
+
+    <!-- Imagen de milanesa con puré -->
+    <img
+      src="https://www.recetasnestle.com.py/sites/default/files/styles/recipe_detail_desktop_new/public/srh_recipes/1e13737ba00568d3938668193541fbad.webp?itok=LFUvBkjH"
+      alt="Milanesa con puré">
+  </div>
+
+  <script>
+    function getNextFridayAt20() {
+      const now = new Date();
+      const result = new Date();
+
+      const day = now.getDay(); // 0 domingo, 5 viernes
+      const daysUntilFriday = (5 - day + 7) % 7 || 7;
+
+      result.setDate(now.getDate() + daysUntilFriday);
+      result.setHours(20, 0, 0, 0);
+
+      return result;
+    }
+
+    const targetDate = getNextFridayAt20();
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        document.getElementById("countdown").innerText = "🍽️ ¡Es hora de la milanesa con puré!";
+        return;
+      }
+
+      const seconds = Math.floor(diff / 1000) % 60;
+      const minutes = Math.floor(diff / (1000 * 60)) % 60;
+      const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+      document.getElementById("countdown").innerText =
+        `${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+
+</html>
