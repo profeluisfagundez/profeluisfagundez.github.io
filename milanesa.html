@@ -3,90 +3,154 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cuenta regresiva 🍽️</title>
+
   <style>
-    body {
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    }
+
+    body {
       background: #f4f4f4;
-      text-align: center;
+      padding: 20px;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 500px;
+      margin: auto;
     }
 
     .container {
       background: white;
-      padding: 30px;
+      padding: 20px;
       border-radius: 15px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
-      gap: 20px;
+      text-align: center;
     }
 
     h1 {
-      margin-bottom: 20px;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 1rem;
+      color: #555;
     }
 
     .time {
-      font-size: 1.8rem;
+      font-size: 1.3rem;
       margin: 15px 0;
+      font-weight: bold;
     }
 
     img {
       width: 100%;
       border-radius: 12px;
       margin-top: 15px;
+      object-fit: cover;
+    }
+
+    /* Tablets */
+    @media (min-width: 600px) {
+      .wrapper {
+        max-width: 700px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .time {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* Desktop */
+    @media (min-width: 900px) {
+      .wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .container {
+        width: 300px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
-    <h3>Sistema de Cuentas regresivas de Dudu y Bubu</h3>
-    <img src="https://i.pinimg.com/originals/83/e3/6d/83e36d1b26dab6e03bb578e183b6a453.jpg" alt="Dudu y Bubu">
-  </div>
+  <div class="wrapper">
 
-  <div class="container">
-    <h1>⏳ Cuenta regresiva para comer milanesa con puré</h1>
-    <h3>Hacer Salchichon de chocolate :3 </h3>
-    <div class="time" id="countdown"></div>
-    <!-- Imagen de milanesa con puré -->
-    <img
-      src="https://www.recetasnestle.com.py/sites/default/files/styles/recipe_detail_desktop_new/public/srh_recipes/1e13737ba00568d3938668193541fbad.webp?itok=LFUvBkjH"
-      alt="Milanesa con puré">
-    <h2>Bubu me prometio unas milanesas ricas con pure :3</h2>
+    <div class="container">
+      <h3>Sistema de cuentas regresivas de Dudu y Bubu</h3>
+      <div class="time" id="countdown"></div>
+      <img src="https://i.pinimg.com/originals/83/e3/6d/83e36d1b26dab6e03bb578e183b6a453.jpg" alt="Dudu y Bubu">
+    </div>
+
+    <div class="container">
+      <h1>⏳ Cuenta regresiva para</h1>
+      <h3>Comer milanesa con puré :3</h3>
+      <img
+        src="https://www.recetasnestle.com.py/sites/default/files/styles/recipe_detail_desktop_new/public/srh_recipes/1e13737ba00568d3938668193541fbad.webp?itok=LFUvBkjH"
+        alt="Milanesa con puré">
+    </div>
+
+    <div class="container">
+      <h1>⏳ Cuenta regresiva para</h1>
+      <h3>Comer salchichón de chocolate :3</h3>
+      <img src="https://static.solopostres.com/uploads/2013/11/salchichon-chocolate-800x419.jpg"
+        alt="Salchichón de chocolate">
+    </div>
+
   </div>
 
   <script>
     function getNextFridayAt20() {
       const now = new Date();
       const result = new Date();
-      const day = now.getDay(); // 0 domingo, 5 viernes
+      const day = now.getDay();
       const daysUntilFriday = (5 - day + 7) % 7 || 7;
       result.setDate(now.getDate() + daysUntilFriday);
       result.setHours(20, 0, 0, 0);
       return result;
     }
+
     const targetDate = getNextFridayAt20();
+
     function updateCountdown() {
       const now = new Date();
       const diff = targetDate - now;
+
       if (diff <= 0) {
-        document.getElementById("countdown").innerText = "🍽️ ¡Es hora de la milanesa con puré!";
+        document.getElementById("countdown").innerText =
+          "🍽️ ¡Es hora de comer cosas ricas!";
         return;
       }
+
       const seconds = Math.floor(diff / 1000) % 60;
       const minutes = Math.floor(diff / (1000 * 60)) % 60;
       const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
       const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
       document.getElementById("countdown").innerText =
-        `${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
+        `Falta: ${days} días, ${hours}h ${minutes}m ${seconds}s`;
     }
+
     setInterval(updateCountdown, 1000);
     updateCountdown();
   </script>
+
 </body>
 
 </html>
