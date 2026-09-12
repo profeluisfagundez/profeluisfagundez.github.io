@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 40px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+}
+
+
+/* ==============================
+   MATRIZ DE ENTRADA
+   ============================== */
+
+.matriz {
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.matriz input {
+    width: 60px;
+    height: 35px;
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+
+/* ==============================
+   BOTÓN
+   ============================== */
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* ==============================
+   RESULTADO
+   ============================== */
+
+#resultado {
+    margin-top: 30px;
+}
+
+#resultado h2 {
+    margin-bottom: 10px;
+}
+
+#resultado h3 {
+    margin-top: 25px;
+}
+
+
+/* ==============================
+   MATRIZ INVERSA
+   ============================== */
+
+#resultado table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+#resultado td {
+    min-width: 70px;
+    height: 50px;
+    padding: 8px 15px;
+    text-align: center;
+    border: none;
+}
+
+
+/* ==============================
+   CORCHETES DE LA MATRIZ
+   ============================== */
+
+#resultado table {
+    position: relative;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+
+#resultado table::before,
+#resultado table::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 20px;
+}
+
+#resultado table::before {
+    left: -3px;
+    top: 0;
+    border-top: 3px solid black;
+}
+
+#resultado table::after {
+    right: -3px;
+    top: 0;
+    border-top: 3px solid black;
+}
